@@ -6,11 +6,15 @@
 
 ## **Install node_modules**
 
-### `npm install`
+```
+npm install
+```
 
 ## **Run**
 
-### `npm run dev`
+```
+npm run dev
+```
 
 ### _Here the above command concurrently run JSON server and react._
 
