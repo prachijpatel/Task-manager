@@ -6,15 +6,11 @@
 
 ## **Install node_modules**
 
-##
-
 ```
 npm install
 ```
 
 ## **Run**
-
-##
 
 ```
 npm run dev
