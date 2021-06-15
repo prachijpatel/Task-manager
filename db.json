@@ -1,0 +1,64 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Wake up",
+      "description": "at sharp 7 am not a second late!"
+    },
+    {
+      "id": 2,
+      "title": "Brush ",
+      "description": "Do it properly so good take can be taken."
+    },
+    {
+      "id": 3,
+      "title": "Shower",
+      "description": "Cleanliness is important"
+    },
+    {
+      "id": 4,
+      "title": "Eat Breakfast",
+      "description": "It is necessary"
+    },
+    {
+      "id": 5,
+      "title": "Work",
+      "description": "Boring but also important"
+    },
+    {
+      "id": 6,
+      "title": "Eat Lunch",
+      "description": "Eat properly"
+    },
+    {
+      "id": 7,
+      "title": "Take Nap",
+      "description": "Short naps make your energy high"
+    },
+    {
+      "id": 8,
+      "title": "Work again",
+      "description": "Complete the task"
+    },
+    {
+      "id": 9,
+      "title": "Eat Dinner",
+      "description": "Light dinner is good"
+    },
+    {
+      "id": 10,
+      "title": "Binge watch",
+      "description": "Favourite time of the day  ;)"
+    },
+    {
+      "id": 11,
+      "title": "Sound Sleep ",
+      "description": "Have a good sleep for the energy rebuilding."
+    },
+    {
+      "id": 12,
+      "title": "new",
+      "description": "new"
+    }
+  ]
+}
