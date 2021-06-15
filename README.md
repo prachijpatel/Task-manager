@@ -1,6 +1,6 @@
 # Task Manager
 
-### This is a simple task manager which adds deletes updates tasks made using React and JSON server.
+### This is a simple task manager which adds, deletes, updates tasks that's made using React and JSON server.
 
 <br/>
 
