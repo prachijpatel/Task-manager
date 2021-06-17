@@ -43,7 +43,7 @@ function App() {
 
   // fetch all data from json-server
   const fetchTasks = async () => {
-    const res = await fetch("http://localhost:5001/tasks");
+    const res = await fetch("http://3.22.181.103:5001/tasks");
     const data = await res.json();
     console.log("fetch", data);
     return data;
@@ -51,7 +51,7 @@ function App() {
 
   // fetch the task of perticular id
   const fetchTask = async (id) => {
-    const res = await fetch(`http://localhost:5001/tasks/${id}`, {
+    const res = await fetch(`http://3.22.181.103:5001/tasks/${id}`, {
       method: "PUT",
     });
     const data = await res.json();
@@ -66,7 +66,7 @@ function App() {
     setCurrTask(null, console.log("dis-curr", currTask));
   };
   const onAddTask = async (task) => {
-    const res = await fetch("http://localhost:5001/tasks", {
+    const res = await fetch("http://3.22.181.103:5001/tasks", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -91,7 +91,7 @@ function App() {
       title: task.title,
       description: task.description,
     };
-    const res = await fetch(`http://localhost:5001/tasks/${task.id}`, {
+    const res = await fetch(`http://3.22.181.103:5001/tasks/${task.id}`, {
       method: "PUT",
       headers: {
         "Content-type": "application/json",
@@ -116,7 +116,7 @@ function App() {
   };
 
   const onDelete = async (id) => {
-    await fetch(`http://localhost:5001/tasks/${id}`, {
+    await fetch(`http://3.22.181.103:5001/tasks/${id}`, {
       method: "DELETE",
     });
     console.log("Delete", id);
