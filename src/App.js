@@ -7,8 +7,6 @@ import ShowTask from "./components/ShowTask";
 import { Container, Col, Row } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import UpdateTask from "./components/UpdateTask";
-import { withWidth } from "@material-ui/core";
-// import { Container } from "@material-ui/core";
 
 function App() {
   const [display, setDisplay] = useState(true);
@@ -43,7 +41,7 @@ function App() {
 
   // fetch all data from json-server
   const fetchTasks = async () => {
-    const res = await fetch("http://3.22.181.103:5001/tasks");
+    const res = await fetch(`${process.env.URL}/tasks`);
     const data = await res.json();
     console.log("fetch", data);
     return data;
@@ -51,7 +49,7 @@ function App() {
 
   // fetch the task of perticular id
   const fetchTask = async (id) => {
-    const res = await fetch(`http://3.22.181.103:5001/tasks/${id}`, {
+    const res = await fetch(`${process.env.URL}/tasks/${id}`, {
       method: "PUT",
     });
     const data = await res.json();
@@ -66,7 +64,7 @@ function App() {
     setCurrTask(null, console.log("dis-curr", currTask));
   };
   const onAddTask = async (task) => {
-    const res = await fetch("http://3.22.181.103:5001/tasks", {
+    const res = await fetch(`${process.env.URL}/tasks`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -91,7 +89,7 @@ function App() {
       title: task.title,
       description: task.description,
     };
-    const res = await fetch(`http://3.22.181.103:5001/tasks/${task.id}`, {
+    const res = await fetch(`${process.env.URL}/tasks/${task.id}`, {
       method: "PUT",
       headers: {
         "Content-type": "application/json",
@@ -116,7 +114,7 @@ function App() {
   };
 
   const onDelete = async (id) => {
-    await fetch(`http://3.22.181.103:5001/tasks/${id}`, {
+    await fetch(`${process.env.URL}/tasks/${id}`, {
       method: "DELETE",
     });
     console.log("Delete", id);

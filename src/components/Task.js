@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ShowTask from "./ShowTask";
 import { FaTimes } from "react-icons/fa";
 import { Col, Row } from "react-bootstrap";
 

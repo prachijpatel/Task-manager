@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Row, Col } from "react-bootstrap";
-import { FaEdit, FaPlus, FaTrash } from "react-icons/fa";
+import { FaEdit, FaTrash } from "react-icons/fa";
 
 class ShowTask extends Component {
   delelteTask = (task) => {

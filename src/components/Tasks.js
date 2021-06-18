@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Task from "./Task";
 import { Col } from "react-bootstrap";
-import { FaCross, FaTimes } from "react-icons/fa";
 
 class Tasks extends Component {
   render() {

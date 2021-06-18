@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Button from "./Button";
 import Tasks from "./Tasks";
 import { FaPlus } from "react-icons/fa";
-import AddTask from "./AddTask";
 import { Row, Col } from "react-bootstrap";
 
 class Header extends Component {
