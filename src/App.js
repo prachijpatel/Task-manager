@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import UpdateTask from "./components/UpdateTask";
 
 function App() {
+  console.log(process.env);
   const [display, setDisplay] = useState(true);
   const [showTask, setShowTask] = useState(false);
   const [currTask, setCurrTask] = useState([]);
@@ -30,6 +31,7 @@ function App() {
     //   // time: "tuesday",
     // },
   ]);
+
   useEffect(() => {
     const getTasks = async () => {
       const tasksFromServer = await fetchTasks();
@@ -41,7 +43,7 @@ function App() {
 
   // fetch all data from json-server
   const fetchTasks = async () => {
-    const res = await fetch(`${process.env.URL}/tasks`);
+    const res = await fetch(`${process.env["REACT_APP_JSON_URL"]}/tasks`);
     const data = await res.json();
     console.log("fetch", data);
     return data;
@@ -49,9 +51,12 @@ function App() {
 
   // fetch the task of perticular id
   const fetchTask = async (id) => {
-    const res = await fetch(`${process.env.URL}/tasks/${id}`, {
-      method: "PUT",
-    });
+    const res = await fetch(
+      `${process.env["REACT_APP_JSON_URL"]}/tasks/${id}`,
+      {
+        method: "PUT",
+      }
+    );
     const data = await res.json();
     console.log("fetch", data);
     return data;
@@ -64,7 +69,7 @@ function App() {
     setCurrTask(null, console.log("dis-curr", currTask));
   };
   const onAddTask = async (task) => {
-    const res = await fetch(`${process.env.URL}/tasks`, {
+    const res = await fetch(`${process.env["REACT_APP_JSON_URL"]}/tasks`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -89,13 +94,16 @@ function App() {
       title: task.title,
       description: task.description,
     };
-    const res = await fetch(`${process.env.URL}/tasks/${task.id}`, {
-      method: "PUT",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(updatedTask),
-    });
+    const res = await fetch(
+      `${process.env["REACT_APP_JSON_URL"]}/tasks/${task.id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(updatedTask),
+      }
+    );
     const data = await res.json();
     // using only react
     setTasks(
@@ -114,7 +122,7 @@ function App() {
   };
 
   const onDelete = async (id) => {
-    await fetch(`${process.env.URL}/tasks/${id}`, {
+    await fetch(`${process.env["REACT_APP_JSON_URL"]}/tasks/${id}`, {
       method: "DELETE",
     });
     console.log("Delete", id);

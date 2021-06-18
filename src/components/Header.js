@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import Button from "./Button";
-import Tasks from "./Tasks";
 import { FaPlus } from "react-icons/fa";
 import { Row, Col } from "react-bootstrap";
 
